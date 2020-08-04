@@ -1,0 +1,109 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Gym</a>
+  
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="/">About Us </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/details">My Details</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/payment">Payment<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <a class="btn btn-secondary my-2 my-sm-0" href = '/users/logout'>Logout</a>
+      </form>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="container" style="width: 50%;">
+    <legend class="text-center">Payment</legend>
+    <hr>
+    
+    <% if (typeof errors !='undefined') { %>
+      <% errors.forEach(err=>{ %>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <%= err.msg %>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      <% });} %>
+  
+      <form class="form-group" action="/payment" method="POST">
+        <div class="form-group">
+          <label for="accno">Account Number</label>
+          <input
+            type="number"
+            id="acc"
+            name="accno"
+            class="form-control"
+            placeholder="Enter Account Number"
+            required
+            value="<%= typeof accno != 'undefined' ? accno : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input
+            type="password"
+            id="cvv"
+            name="cvv"
+            class="form-control"
+            placeholder="Enter CVV"
+            required
+            value="<%= typeof cvv != 'undefined' ? cvv : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="training">Training Type</label>
+            <select class="form-control" id="training" name="training" onchange="setAmount()">
+              <option >-------</option>
+              <option >Weight Loss</option>
+              <option >Strength Training</option>
+              <option >Body Building</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount</label>
+          <input
+            type="number"
+            id="amount"
+            name="amount"
+            class="form-control"
+            placeholder="Enter Amount"
+            readonly
+            required
+            value="<%= typeof amount != 'undefined' ? amount : '' %>"
+          />
+        </div>
+        <button type="submit" class="btn btn-outline-primary btn-block">
+          Pay <i class="fas fa-lock"></i>
+        </button>
+      </form>
+  </div>
+
+  <script>
+    function setAmount(){
+      let x = document.getElementById("training").value
+      let y = 0
+      if(x === "Weight Loss"){
+        y = 600;
+      }else if(x === "Strength Training"){
+        y = 750
+      }else if(x === "Body Building"){
+        y = 999
+      }
+      document.getElementById("amount").value = y
+    }
+  </script>

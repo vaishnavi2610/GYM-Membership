@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Gym</a>
+  
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">About Us </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/details">My Details<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/payment">Payment</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <h5 style="margin-right: 10px;color: white;">Welcome <%= user.name %></h5>
+        <a class="btn btn-secondary my-2 my-sm-0" href = '/users/logout'>Logout</a>
+      </form>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-3">Hello, <%= user.name  %></h1>
+      <p class="lead">Welcome to your Gym Membership</p>
+      <hr class="my-4">
+      <p>We Specialize in fine tuning your body.We have best customer service and equipment.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="/" role="button">Learn more</a>
+      </p>
+    </div>
+    <legend class="text-center h2">Your Details</legend>
+    <hr>
+    <div style="display: flex; justify-content: space-evenly;">
+      <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header">Personal Details</div>
+        <div class="card-body">
+          <h4 class="card-title">Name</h4>
+          <p class="card-text"><%= user.name %></p>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Email</h4>
+          <p class="card-text"><%= user.email %></p>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Gender</h4>
+          <p class="card-text"><%= user.gender %></p>
+        </div>
+      </div>
+      <div class="list-group">
+        <div class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Training Details</h5>
+          </div>
+          <p class="mb-1"><%= user.training %></p>
+          <small>Training is taken care by specialists in the respective Fields.</small>
+        </div>
+        <div  class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Contact Info</h5>
+          </div>
+          <p class="mb-1">Phone</p>
+          <small class="text-muted"><%= user.phone %></small>
+          <p class="mb-1">Aadhar Number</p>
+          <small class="text-muted"><%= user.aadhar %></small>
+        </div>
+      </div>
+    </div>
+    
+  </div>

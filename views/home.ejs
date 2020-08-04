@@ -1,0 +1,127 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Gym</a>
+  
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">About Us <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/details">My Details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/payment">Payment</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <h5 style="margin-right: 10px;color: white;">Welcome <%= user.name %></h5>
+        <a class="btn btn-secondary my-2 my-sm-0" href = '/users/logout'>Logout</a>
+      </form>
+    </div>
+  </nav>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<div class="container">
+  <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-2" data-slide-to="1"></li>
+      <li data-target="#carousel-example-2" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <div class="view">
+          <img class="d-block w-100" src="/images/weightloss.jpg"
+            alt="Weight Loss">
+          <div class="mask rgba-black-light"></div>
+        </div>
+        <div class="carousel-caption">
+          <h3 class="h3-responsive" style="color: white;">Weight Loss</h3>
+          <p>Workout Specially designed for Weight Loss.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="view">
+          <img class="d-block w-100" src="/images/strengthtraining.jpg"
+            alt="Second slide">
+          <div class="mask rgba-black-strong"></div>
+        </div>
+        <div class="carousel-caption">
+          <h3 class="h3-responsive" style="color: white;">Strength Training</h3>
+          <p>Workout and Diet Plan for Strength Training.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="view">
+          <img class="d-block w-100" src="/images/bodybuilding.jpg"
+            alt="Third slide">
+          <div class="mask rgba-black-slight"></div>
+        </div>
+        <div class="carousel-caption">
+          <h3 class="h3-responsive" style="color: white;">Body Building</h3>
+          <p>Grow Body into fine shape and tune your muscles.</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<br>
+<br>
+<div class="container">
+  <div class="row justify-content-center">
+      <div class="col-md-10 col-lg-6 image-element">
+          <div class="img-wrap" style="height: 100%; width: 100%;">
+              <img src="/images/side1.jpg" style = "width: 70%;">
+          </div>
+      </div>
+      <div class="col-md-10 col-lg-6 text-element">          
+          <h2 class="mbr-section-title mbr-fonts-style align-center display-5">Cardio</h2>
+          <p class="mbr-text mbr-fonts-style mbr-lighter align-center display-7">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit eligendi omnis ducimus necessitatibus 
+            libero! Incidunt 
+            libero quod atque omnis quam animi corrupti ipsa pariatur eveniet, voluptate hic quaerat amet nam.
+            <br></p>
+      </div>
+  </div>
+</div>
+<br>
+<br>
+
+<div class="container" >
+  <div class="row justify-content-center" style="display: flex; flex-direction: row-reverse;">
+      <div class="col-md-10 col-lg-6 image-element">
+          <div class="img-wrap" style="height: 100%; width: 100%;">
+              <img src="/images/side2.jpg" style = "width: 70%;">
+          </div>
+      </div>
+      <div class="col-md-10 col-lg-6 text-element">          
+          <h2 class="mbr-section-title mbr-fonts-style align-center display-5">Special Training Equipment</h2>
+          <p class="mbr-text mbr-fonts-style mbr-lighter align-center display-7">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, 
+              accusantium! Eum praesentium facilis dignissimos itaque nihil quae suscipit iure, 
+              quibusdam consectetur numquam ducimus? Mollitia impedit nihil incidunt saepe voluptates odio.
+            <br></p>
+      </div>
+  </div>
+</div>
+
+<footer class="page-footer font-small blue pt-4">
+
+  <div class="footer-copyright text-center py-3"><i class="fas fa-phone-volume"></i>Contact us:
+    <small> 9995556661</small>
+  </div>
+</footer>
